@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".activities.BattleActivity"
+                android:background="@color/colorPrimary"
+                android:id="@+id/activityView"
+                android:alpha="1"
+                style="@style/activity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:id="@+id/BattleScreen"
+        android:alpha="1">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_below="@+id/level"
+            android:layout_marginTop="66dp"
+            android:id="@+id/enemy_wrapper"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enemy"
+                android:id="@+id/enemy_name"
+                android:textColor="@color/colorFont"
+                android:layout_marginLeft="2dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/enemy_debuff_list"
+                android:layout_alignEnd="@+id/enemy_name"
+                android:layout_height="16dp">
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/enemy_name"
+                android:id="@+id/enemy_hp">
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:progressDrawable="@drawable/health_bar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/enemy_hp_bar"
+                     />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text="@string/health_val"
+                    android:id="@+id/enemy_hp_text"
+                    android:textColor="@color/colorFont"
+                    android:layout_marginLeft="2dp"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="1dp" />
+
+            </FrameLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/space3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/enemy_ability_text"
+                android:layout_below="@+id/enemy_hp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/colorFont"
+                android:visibility="visible" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:id="@+id/enemy_ability_bar"
+                android:layout_below="@+id/enemy_ability_text"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="0dp"
+                android:layout_alignRight="@+id/space3"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/enemy_dmg_log"
+                android:layout_toRightOf="@+id/space3"
+                android:layout_toEndOf="@+id/space3"
+                android:layout_alignTop="@+id/enemy_ability_text"
+                android:layout_below="@+id/enemy_hp" />
+
+        </RelativeLayout>
+
+        <!-- enemy hp -->
+        <!-- hero_hp -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/hero_wrapper"
+            android:layout_below="@id/enemy_wrapper"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="66dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textSize="12sp"
+                android:id="@+id/hero_anger"
+                android:textColor="@color/colorFont"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:id="@+id/hero_debuff_list"
+                android:layout_alignParentEnd="true"
+                android:layout_alignEnd="@+id/hero_anger">
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/hero_hp"
+                android:layout_below="@+id/hero_anger">
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:progressDrawable="@drawable/health_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hero_hp_bar" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/health_val"
+                    android:id="@+id/hero_hp_text"
+                    android:textColor="@color/colorFont"
+                    android:layout_marginLeft="2dp"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="1dp"
+                     />
+
+            </FrameLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/space2" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/hero_dmg_log"
+                android:layout_toRightOf="@+id/space2"
+                android:layout_toEndOf="@+id/space2"
+                android:layout_alignTop="@+id/hero_ability_text"
+                android:layout_below="@+id/hero_hp" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"
+                android:id="@+id/hero_ability_bar"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/hero_ability_text"
+                android:visibility="visible"
+                android:layout_marginTop="0dp"
+                android:layout_alignRight="@+id/space2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/hero_ability_text"
+                android:layout_below="@+id/hero_hp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/colorFont"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/zorn_icon_battle"
+                android:background="@drawable/ic_fist"
+                android:backgroundTint="@color/colorFont"
+                android:layout_centerVertical="false"
+                android:contentDescription="Zorn Icon"
+                android:layout_toRightOf="@+id/hero_anger"
+                android:layout_toEndOf="@+id/hero_anger"
+                android:layout_height="12dp"
+                android:layout_width="12dp"
+                android:layout_marginTop="2dp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Dungeon"
+            android:id="@+id/dungeon_text"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/colorFont"
+            android:alpha="0.7" />
+
+        <!-- Action-Buttons Grid API21
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:weightSum="4"
+            android:orientation="horizontal"
+            android:useDefaultMargins="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/ActionButtonGrid"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/action0"
+                android:tag="0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="action0"
+                android:onClick="onActionClick"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorFont" />
+
+            <Button
+                android:id="@+id/action1"
+                android:tag="1"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:text="action1"
+                android:onClick="onActionClick"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorFont"/>
+
+            <Button
+                android:id="@+id/action2"
+                android:tag="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="action2"
+                android:onClick="onActionClick"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorFont"/>
+
+            <Button
+                android:id="@+id/action3"
+                android:tag="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="action3"
+                android:onClick="onActionClick"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorFont"/>
+        </GridLayout> -->
+
+        <!-- Action buttons -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/level"
+            android:id="@+id/level"
+            android:layout_below="@+id/dungeon_text"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/colorFont"
+            android:alpha="0.7" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hero_level"
+            android:id="@+id/hero_level"
+            android:layout_below="@+id/level"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:alpha="0.7"
+            android:textColor="@color/colorFont" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Victory/ Lose"
+            android:id="@+id/battle_message"
+            android:layout_below="@+id/level"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorFont" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/countdown"
+            android:alpha="0.7"/>
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/start_countdown"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/enemy_wrapper"
+            android:layout_marginTop="14dp"/>
+
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/space_center_ma"/>
+
+            <Button
+                android:id="@+id/action0"
+                android:tag="0"
+                android:text="action0"
+                android:onClick="onActionClick"
+                style="@style/action_button_style"
+                android:layout_marginLeft="0dp"
+                android:layout_width="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:layout_alignEnd="@+id/space_center_ma"/>
+
+            <Button
+                android:id="@+id/action1"
+                android:tag="1"
+                android:text="action1"
+                android:onClick="onActionClick"
+                style="@style/action_button_style"
+                android:layout_marginRight="0dp"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/action0"/>
+
+            <Button
+                android:id="@+id/action2"
+                android:tag="2"
+                android:text="action2"
+                android:onClick="onActionClick"
+                style="@style/action_button_style"
+                android:layout_marginLeft="0dp"
+                android:layout_width="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/action0"
+                android:layout_alignEnd="@+id/space_center_ma"/>
+
+            <Button
+                android:id="@+id/action3"
+                android:tag="3"
+                android:text="action3"
+                android:onClick="onActionClick"
+                style="@style/action_button_style"
+                android:layout_marginRight="0dp"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/action0"
+                android:layout_toRightOf="@+id/action0"/>
+
+        </RelativeLayout>
+
+
+        <!-- End Action Buttons -->
+
+
+    </RelativeLayout>
+
+    <!-- EndScreen Layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/EndScreen"
+        android:alpha="1"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/level"
+            android:id="@+id/endscreen_message"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorFont"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout"
+            android:visibility="visible"
+            android:layout_marginTop="65dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/new_game"
+                android:id="@+id/new_game"
+                android:background="@color/colorPrimaryDark"
+                android:textAllCaps="false"
+                android:visibility="visible"
+                android:onClick="onClickNewGame"
+                style="@style/button_normal"
+                android:layout_margin="8dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/menu"
+                android:id="@+id/menu_button"
+                android:onClick="OnClickFinish"
+                android:background="@color/colorPrimaryDark"
+                android:textAllCaps="false"
+                android:visibility="visible"
+                style="@style/button_normal"
+                android:layout_margin="8dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/endscreen_info"
+            android:layout_below="@+id/endscreen_message"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:maxWidth="200dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorFont" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="false"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/lostExp_gained"
+            android:layout_below="@+id/endscreen_info"
+            android:layout_marginTop="8dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

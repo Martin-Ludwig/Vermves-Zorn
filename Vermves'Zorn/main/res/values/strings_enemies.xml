@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Creatures -->
+    <string name="dummy">Dummy</string>
+    <string name="dummy_boss">Dummy Boss</string>
+
+    <string name="forgewight">Schmiedewicht</string>
+    <string name="selvetarm">Selvetarm</string>
+    <string name="justiciar_thommis">Justiziar Thommis</string>
+    <string name="rand_stormweaver">Rand Sturmweber</string>
+    <string name="duncan_the_black">Duncan der Schwarze</string>
+
+    <string name="ironking_jovesh">Eisenkönig Jovesh</string>
+    <string name="enslaved_blacksmith">Versklavter Schmied</string>
+    <string name="exhausted_prospector">Ermüdeter Schürfer</string>
+    <string name="scrawny_warden">Dürrer Aufseher</string>
+    <string name="raging_prisoner">Rasender Häftling</string>
+    <string name="burned_barghest">Verbrannter Barghest</string>
+    <string name="iron_encased_barghest">Eisenummantelter Barghest</string>
+</resources>

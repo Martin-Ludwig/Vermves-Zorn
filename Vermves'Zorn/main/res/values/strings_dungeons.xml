@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- locked -->
+    <string name="rank_requirement">Rang %1$d</string>
+    <string name="locked">\?\?\?</string>
+    <string name="quest">Quest!</string>
+
+    <!-- various -->
+    <string name="dungeon_lost_exp">Verlorene Exp: %1$d</string>
+
+    <!-- Dungeons -->
+    <string name="slavers_exile">Exil des Sklavenhändlers</string>
+    <string name="mines_of_jovesh">Minen von Jovesh</string>
+    <string name="test">Test</string>
+</resources>

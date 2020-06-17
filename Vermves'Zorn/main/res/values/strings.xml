@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Vermves\' Zorn</string>
+
+    <!-- Menu -->
+    <string name="dungeons">Dungeons</string>
+    <string name="vermes_exile">Vermes\' Exil</string>
+    <string name="heroes_talents">Your Talents</string>
+
+    <!-- Main Activity -->
+    <string name="abilities">Fähigkeiten</string>
+
+    <string name="attributes">Attribute</string>
+    <string name="vitality">Vitalität</string>
+    <string name="power">Kraft</string>
+    <string name="malice">Bosheit</string>
+    <string name="recovery">Erholung</string>
+
+    <string name="vitality_value">%1$d</string> <!-- Vitalität: %1$d -->
+    <string name="power_value">%1$d</string> <!-- Kraft: %1$d -->
+    <string name="malice_value">%1$d</string> <!-- Bosheit: %1$d -->
+    <string name="recovery_value">%1$d</string> <!-- Erholung: %1$d -->
+
+    <string name="rank">%1$d</string>
+    <string name="exp">Erfahrung %1$d</string>
+    <string name="nextRankExp">nächster Rang %1$d</string>
+    <string name="amount_of_max">%1$d / %2$d</string>
+    <string name="lvlup">Aufsteigen</string>
+
+    <!-- Battle Activity -->
+    <string name="hero">Held</string>
+    <string name="level">Gegner: %1$d/%2$d</string>
+    <string name="levels">Gegner: %1$d</string>
+    <string name="hero_level">Stufe: %1$s</string>
+
+    <string name="health_val">HP %1$s</string>
+    <string name="anger_val">Zorn %1$s</string>
+
+    <string name="new_game">Neues Spiel</string>
+    <string name="menu">Menü</string>
+    <string name="back">&lt;</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="duration">%1$ss</string>
+
+    <string name="won">Gewonnen!</string>
+    <string name="lost">Verloren!</string>
+    <string name="dungeon_complete">%1$s bezwungen!</string>
+    <string name="lost_info">%1$s besiegte dich mit %2$s.</string>
+    <string name="dungeon_reward">Du erhältst %1$d Exp!</string>
+    <string name="time_over">Die Zeit ist abgelaufen!</string>
+    <string name="battle_lostExp_gained">Du hast %1$d Exp wieder eingesammelt!</string>
+    <string name="battle_exp_lost">Du hast %1$d Exp verloren!</string>
+
+
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="vermves.vermveszorn">
+
+    <application
+        android:layout_centerHorizontal="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activities.MainActivity" android:theme="@style/noAnimTheme" android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.BattleActivity" android:theme="@style/noAnimTheme" android:screenOrientation="portrait" />
+        <activity android:name=".activities.DungeonActivity" android:theme="@style/noAnimTheme" android:screenOrientation="portrait" />
+        <activity android:name=".activities.AbiltiesActivity" android:theme="@style/noAnimTheme" android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

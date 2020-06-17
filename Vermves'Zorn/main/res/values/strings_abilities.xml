@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ability adapter -->
+    <string name="passive">Passiv</string>
+    <string name="permanent">Permanent</string>
+
+    <!-- actions name -->
+    <string name="empty">Leer</string>
+    <string name="empty_desc">Leer</string>
+
+    <!-- Action0 - Weapons -->
+    <string name="dagger">Dolchstoß</string>
+    <string name="dagger_desc">Fügt Blutung zu.</string>
+    <string name="sword">Schwertangriff</string>
+    <string name="sword_desc">Fügt Schaden zu.</string>
+    <string name="halberd">Hellebarde</string>
+    <string name="halberd_desc">Fügt Schaden und Blutung zu.</string>
+    <string name="icecrack">Eisriss</string>
+    <string name="icecrack_desc">Fügt 50% mehr Schaden zu bei Eingefrorenen Gegnern.</string>
+
+    <string name="scratch">Kratzer</string>
+    <string name="scratch_desc">Unbewaffneter Angriff.</string>
+
+    <!-- Action1 -->
+    <string name="final_thrust">Endstoß</string>
+    <string name="final_thrust_desc">Fügt Schaden zu. Erhöhter Schaden bei Gegnern unter 50% Leben.</string>
+    <string name="gash">Schnittwunde</string>
+    <string name="gash_desc">Fügt starke Blutung zu.</string>
+    <string name="meteor">Meteor</string>
+    <string name="meteor_desc">Schaden, Brennen und Unterbechung</string>
+    <string name="earthquake">Erdbeben</string>
+    <string name="earthquake_desc">Fügt Schaden zu und betäubt den Gegner für 1s.</string>
+
+    <!-- Action2 -->
+    <string name="bandage_wounds">Wunden verbinden</string>
+    <string name="bandage_wounds_desc">Heilt euch.</string>
+    <string name="blood_is_power">Blut ist Kraft</string>
+    <string name="blood_is_power_desc">Heilt und fügt euch selbst Blutung zu.</string>
+
+    <!-- Action3 -->
+    <string name="victory_is_mine">Der Sieg ist mein!</string>
+    <string name="victory_is_mine_desc">Fügt den Gegner Schaden zu und heilt euch.</string>
+    <string name="blood_transfer">Bluttransfer</string>
+    <string name="blood_transfer_desc">Überträgt eure Blutung auf den Gegner.</string>
+    <string name="recovery_passive">Genesung</string>
+    <string name="recovery_passive_desc">Heilt über Zeit.</string>
+    <string name="rime">Raueis</string>
+    <string name="rime_desc">Vereist den Gegner für 3 Sekunden.</string>
+    <string name="aftershock">Nachbeben</string>
+    <string name="aftershock_desc">Fügt Schaden zu. Bei betäubten Gegnern erhaltet ihr 1 Zorn.</string>
+
+</resources>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:orientation="vertical" android:layout_width="match_parent"
+                android:id="@+id/listview_background"
+                style="@style/listview_item_style"
+                android:layout_height="wrap_content"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:paddingTop="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/title_view"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ability"
+            android:id="@+id/title"
+            android:textStyle="bold"
+            android:focusable="false"
+            android:clickable="false"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:maxHeight="40dp"
+            android:layout_marginRight="72dp"
+            />
+
+        <RelativeLayout
+            android:layout_width="72dp"
+            android:id="@+id/cb_wrapper"
+            android:clickable="true"
+            android:layout_height="wrap_content"
+            android:paddingRight="16dp"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp">
+
+            <CheckBox
+
+                android:id="@+id/toggle_description"
+                android:button="@null"
+                android:focusable="false"
+                android:textColor="@color/pressed_accent"
+                android:background="@drawable/ic_expand_more_black_24dp"
+                android:backgroundTint="@color/pressed_accent"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:translationZ="2dp"
+                android:clickable="false"
+                android:layout_alignParentRight="true"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/info_view"
+        android:layout_below="@+id/title_view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingRight="16dp"
+        android:layout_marginRight="72dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:id="@+id/description"
+            android:textColor="@color/colorFont"
+            android:alpha="0.7"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentStart="false"
+            android:layout_marginLeft="0dp"
+            android:layout_alignParentEnd="false" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/description"
+            android:id="@+id/description_wrap"
+            android:layout_marginTop="4dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/zorn_wrap"
+                android:layout_marginEnd="8dp">
+
+                <ImageView
+                    android:id="@+id/zorn_icon"
+                    android:background="@drawable/ic_fist"
+                    android:backgroundTint="@color/colorFont"
+                    android:layout_centerVertical="true"
+                    android:alpha="0.7"
+                    android:contentDescription="Zorn Icon"
+                    android:layout_height="12dp"
+                    android:layout_width="12dp"
+                    android:layout_marginEnd="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:id="@+id/zorn_desc"
+                    android:focusable="false"
+                    android:textColor="@color/colorFont"
+                    android:layout_centerVertical="true"
+                    android:alpha="0.7"
+                    android:layout_toRightOf="@+id/zorn_icon"
+                    android:layout_toEndOf="@+id/zorn_icon"
+                    android:textSize="14sp"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/duration_wrap"
+                android:layout_marginEnd="8dp" >
+
+                <ImageView
+                    android:id="@+id/duration_icon"
+                    android:background="@drawable/ic_timelapse_black_24dp"
+                    android:backgroundTint="@color/colorFont"
+                    android:alpha="0.7"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="Duration Icon"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_height="13dp"
+                    android:layout_width="13dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.2s"
+                    android:id="@+id/duration_text"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/duration_icon"
+                    android:alpha="0.7"
+                    android:textColor="@color/colorFont"
+                    android:layout_marginEnd="8dp"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/description_wrap"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="-3dp"
+            android:alpha="0.7"
+            android:id="@+id/attributes_wrapper">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/vitality_wrap">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_vitality"
+                    android:contentDescription="Icon for vitality attribute"
+                    android:id="@+id/vitality_icon"
+                    android:tint="@color/colorFont"
+                    android:padding="4dp"
+                    android:layout_marginTop="1dp"
+                    />
+
+                <TextView
+                    android:text="2"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/vitality_text"
+                    android:layout_width="wrap_content"
+                    android:layout_toEndOf="@+id/vitality_icon"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="8dp"/>
+                />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/recovery_wrap">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_recovery"
+                    android:contentDescription="Icon for recovery attribute"
+                    android:tint="@color/colorFont"
+                    android:id="@+id/recovery_icon"
+                    android:layout_marginTop="1dp"/>
+
+                <TextView
+                    android:text="2"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recovery_text"
+                    android:layout_width="wrap_content"
+                    android:layout_toEndOf="@+id/recovery_icon"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="8dp"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/power_wrap">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_power"
+                    android:contentDescription="Icon for power attribute"
+                    android:tint="@color/colorFont"
+                    android:id="@+id/power_icon"
+                    android:layout_marginTop="1dp"/>
+
+                <TextView
+                    android:text="2"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/power_text"
+                    android:layout_width="wrap_content"
+                    android:layout_toEndOf="@+id/power_icon"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="8dp"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/malice_wrap">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_malice"
+                    android:contentDescription="Icon for malice attribute"
+                    android:tint="@color/colorFont"
+                    android:id="@+id/malice_icon"
+                    android:layout_marginTop="1dp"/>
+
+                <TextView
+                    android:text="2"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/malice_text"
+                    android:layout_width="wrap_content"
+                    android:layout_toEndOf="@+id/malice_icon"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="8dp"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+<!-- android:text="@string/info_icon" -->

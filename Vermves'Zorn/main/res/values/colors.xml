@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryLight">#80cbc4</color>
+    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">#00695c</color>
+    <color name="colorPrimaryDarker">#004d40</color>
+    <color name="colorPrimary_alpha70">#b3009688</color>
+
+    <color name="colorAccentLight">#ffb74d</color>
+    <color name="colorAccent">#ff9800</color>
+    <color name="colorAccentDark">#ef6c00</color>
+
+    <color name="colorFont">#e0f2f1</color>
+
+    <color name="listeviewLight">#00695c</color>
+    <color name="listeviewDark">#00695c</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="white">#ffffff</color>
+
+    <!-- Enemy difficulty colors -->
+
+    <color name="RarityNormal">#e0f2f1</color>
+    <color name="RarityBoss">#ff9800</color>
+    <color name="RarityRare">#dce775</color>
+    <color name="RarityLegendary">#673ab7</color>
+
+    <!-- Attribute Colors -->
+    <color name="vitality">#e53935</color>
+    <color name="power">#fdd835</color>
+    <color name="healingpower">#039be5</color>
+    <color name="malice">#8e24aa</color>
+
+</resources>

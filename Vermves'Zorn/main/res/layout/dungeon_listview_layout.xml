@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical" android:layout_width="match_parent"
+                style="@style/listview_item_style"
+                android:layout_height="wrap_content"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="New Text"
+        android:id="@+id/listview_dungeon_name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textIsSelectable="false"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="@string/rank_requirement"
+        android:layout_width="wrap_content"
+        android:id="@+id/listview_dungeon_rank"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorFont"
+        android:alpha="0.7"
+        android:textSize="13sp"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listview_dungeon_name"
+        android:id="@+id/listview_dungeon_subinfo"
+        >
+
+        <TextView
+            android:id="@+id/listview_dungeon_levels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/levels"
+            android:textColor="@color/colorFont"
+            android:alpha="0.7"
+            android:textSize="13sp"
+            />
+
+        <TextView
+            android:id="@+id/listview_dungeon_quest"
+            android:layout_height="wrap_content"
+            android:text="@string/quest"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:alpha="1"
+            android:textSize="13sp"
+            android:gravity="right"
+            android:layout_width="64dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:text="@string/dungeon_lost_exp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listview_dungeon_lostExp"
+        android:layout_marginRight="8dp"
+        android:layout_below="@+id/listview_dungeon_subinfo"
+        android:alpha="1"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

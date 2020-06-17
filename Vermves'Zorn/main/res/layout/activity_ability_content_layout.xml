@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ability_wrapper"
+        >
+
+        <Button
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ability"
+            android:id="@+id/ability"
+            android:onClick="OnClickShowListView"
+            android:layout_marginEnd="0dp"
+            style="@style/button_normal"
+            android:layout_marginLeft="0dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:tag="1"
+            android:id="@+id/ability_description"
+            android:layout_below="@+id/ability"
+            android:layout_alignStart="@+id/ability"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ability_description"
+            android:layout_alignStart="@+id/ability_description"
+            android:id="@+id/ability_stat">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/zorn_wrap">
+
+                <ImageView
+                    android:id="@+id/zorn_icon"
+                    android:background="@drawable/ic_fist"
+                    android:backgroundTint="@color/colorFont"
+                    android:layout_centerVertical="true"
+                    android:alpha="0.7"
+                    android:contentDescription="Zorn Icon"
+                    android:layout_height="12dp"
+                    android:layout_width="12dp"
+                    android:layout_marginEnd="3dp"
+                    tools:ignore="HardcodedText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:id="@+id/ability_zorn_req"
+                    android:focusable="false"
+                    android:textColor="@color/colorFont"
+                    android:alpha="0.7"
+                    android:layout_toEndOf="@+id/zorn_icon"
+                    android:layout_marginEnd="11dp"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/duration_wrap">
+
+                <ImageView
+                    android:id="@+id/duration_icon"
+                    android:background="@drawable/ic_timelapse_black_24dp"
+                    android:backgroundTint="@color/colorFont"
+                    android:alpha="0.7"
+                    android:layout_height="13dp"
+                    android:layout_width="13dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="2dp"
+                    android:contentDescription="Duration Icon"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.2s"
+                    android:id="@+id/ability_duration"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/duration_icon"
+                    android:alpha="0.7"
+                    android:textColor="@color/colorFont"
+                    android:layout_marginEnd="8dp"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/ability_stat"
+            android:layout_marginTop="4dp"
+            android:alpha="0.7"
+            android:layout_marginStart="0dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/vitality_wrap">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_vitality"
+                    android:contentDescription="Icon for vitality attribute"
+                    android:id="@+id/vitality_icon"
+                    android:tint="@color/colorFont"
+                    android:padding="4dp"
+                    android:layout_marginStart="-3dp"
+                    android:layout_marginEnd="0dp"
+                    android:paddingTop="1dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:text="2"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/vitality_text"
+                    android:layout_width="wrap_content"
+                    android:layout_toEndOf="@+id/vitality_icon"
+                    android:layout_centerInParent="true"
+                    tools:ignore="HardcodedText"
+                    android:layout_marginEnd="8dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/recovery_wrap">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:padding="4dp"
+                    android:layout_marginEnd="0dp"
+                    android:src="@drawable/ic_recovery"
+                    android:contentDescription="Icon for recovery attribute"
+                    android:tint="@color/colorFont"
+                    android:id="@+id/recovery_icon"
+                    android:paddingTop="1dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:text="2"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recovery_text"
+                    android:layout_width="wrap_content"
+                    android:layout_toEndOf="@+id/recovery_icon"
+                    android:layout_centerInParent="true"
+                    tools:ignore="HardcodedText"
+                    android:layout_marginEnd="8dp"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/power_wrap">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:padding="4dp"
+                    android:layout_marginEnd="0dp"
+                    android:src="@drawable/ic_power"
+                    android:contentDescription="Icon for power attribute"
+                    android:tint="@color/colorFont"
+                    android:id="@+id/power_icon"
+                    android:paddingTop="1dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:text="2"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/power_text"
+                    android:layout_width="wrap_content"
+                    android:layout_toEndOf="@+id/power_icon"
+                    android:layout_centerInParent="true"
+                    tools:ignore="HardcodedText"
+                    android:layout_marginEnd="8dp"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/malice_wrap">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:padding="4dp"
+                    android:layout_marginEnd="0dp"
+                    android:src="@drawable/ic_malice"
+                    android:contentDescription="Icon for malice attribute"
+                    android:tint="@color/colorFont"
+                    android:id="@+id/malice_icon"
+                    android:paddingTop="1dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:text="2"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/malice_text"
+                    android:layout_width="wrap_content"
+                    android:layout_toEndOf="@+id/malice_icon"
+                    android:layout_centerInParent="true"
+                    tools:ignore="HardcodedText"
+                    android:layout_marginEnd="8dp"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
